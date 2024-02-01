@@ -1,0 +1,43 @@
+
+.logo img{
+    width: 40px;
+    height: 40px;
+    
+}
+
+.search{
+    width: 29px;
+}
+
+/* navbar */
+.navbar{
+    justify-content: space-between;
+    padding: 20px 15px;
+    align-items: center;
+}
+
+.nav{
+    /* justify-content: space-between; */
+    gap: 10px;
+    
+}
+
+.nav-elements{
+    transition: 0.2s;
+}
+.nav-elements:hover{
+    transform: scale(1.1);
+}
+
+.nav_middle{
+  padding-inline: 20px;
+  align-items: center;
+}
+
+.nav-right img{
+    padding-right:5px;
+}
+.gap{
+    padding-inline: 30px;
+}
+
