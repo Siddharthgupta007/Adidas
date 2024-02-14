@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './index.css'
@@ -27,6 +28,7 @@ function App() {
         <Route path="/kids" element={<Kids/>} />
         <Route path="/cart" element={<Cart/>} />
       </Routes>
+      
       <Footer/>
       
     </BrowserRouter>

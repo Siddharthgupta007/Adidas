@@ -1,122 +1,172 @@
 import React from 'react'
+import useFetch from '../../hooks/useFetch'
 
 const Women = () => {
+
+	
+
+  const { loading, error, data } = useFetch('http://localhost:1337/api/products?populate=*')
+
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error..</p>
+
+  console.log(data);
   return (
-    <section className="py-6 dark:bg-gray-800 dark:text-gray-50">
-	<div className="container mx-auto p-4 sm:p-10">
-		<div className="mb-16 space-y-4 text-center">
-			<h1 className="text-4xl font-semibold leadi">Pricing</h1>
-			<p className="px-4 sm:px-8 lg:px-24">Sunt suscipit eaque qui iure unde labore numquam iusto alias explicabo, pariatur ipsam, cupiditate aliquid modi?</p>
-			<div>
-				<button className="px-4 py-1 font-semibold border rounded-l-lg dark:bg-violet-400 dark:border-violet-400 dark:text-gray-900">Monthly</button>
-				<button className="px-4 py-1 border rounded-r-lg dark:border-violet-400">Annually</button>
-			</div>
-		</div>
-		<div className="grid max-w-md grid-cols-1 gap-6 mx-auto auto-rows-fr lg:max-w-full lg:gap-2 xl:gap-6 lg:grid-cols-3">
-			<div className="relative z-0 flex flex-col items-center p-8 border rounded-md">
-				<span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-400 dark:text-gray-900">Personal</span>
-				<p className="my-6 text-4xl font-bold dark:text-violet-400">FREE</p>
-				<ul className="flex-1 space-y-2">
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur adipisicing</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur adipisicing</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur adipisicing</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur adipisicing</span>
-					</li>
-				</ul>
-				<button className="px-4 py-2 mt-4 font-semibold uppercase border rounded-lg md:mt-12 sm:py-3 sm:px-8 dark:border-violet-400">Subscribe</button>
-			</div>
-			<div className="relative flex flex-col items-center p-8 border-2 rounded-md dark:border-violet-400 dark:bg-gray-800">
-				<span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-400 dark:text-gray-900">Professional</span>
-				<p className="flex items-center justify-center my-6 space-x-2 font-bold">
-					<span className="text-lg line-through dark:text-gray-300">&nbsp;32€&nbsp;</span>
-					<span className="pb-2 text-4xl">19€</span>
-					<span className="text-lg">/mo</span>
-				</p>
-				<ul className="flex-1 space-y-2">
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Consectetur</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Adipisicing</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Aliquam</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur facilis</span>
-					</li>
-				</ul>
-				<button className="px-8 py-3 mt-12 text-lg font-semibold uppercase rounded dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
-			</div>
-			<div className="relative z-0 flex flex-col items-center p-8 border rounded-md dark:bg-gray-800">
-				<span className="absolute top-0 px-6 pt-1 pb-2 font-medium rounded-b-lg dark:bg-violet-400 dark:text-gray-900">Enterprise</span>
-				<p className="flex items-center justify-center my-6 space-x-2 font-bold">
-					<span className="text-lg line-through dark:text-gray-300">&nbsp;49€&nbsp;</span>
-					<span className="pb-2 text-4xl">37€</span>
-					<span className="text-lg">/mo</span>
-				</p>
-				<ul className="flex-1 space-y-2">
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur adipisicing</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur adipisicing</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur adipisicing</span>
-					</li>
-					<li className="flex items-center space-x-2">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
-						</svg>
-						<span>Lumet consectetur adipisicing</span>
-					</li>
-				</ul>
-				<button className="px-8 py-3 mt-12 text-lg font-semibold uppercase border rounded dark:border-violet-400">Subscribe</button>
-			</div>
-		</div>
-	</div>
-</section>
+    
+	
+	<section>
+     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-14">Sneakers</h1>
+    <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
+          {data.data.filter((prod)=> (prod.attributes.Category === "women" && prod.attributes.subcategory === "sneaker")).map(prod => (
+            <div key={prod.id} className="">
+              <div className="sellcard">
+
+
+                <div class="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet  ">
+                  <a href="#">
+                    <img class="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data.attributes.url}`} alt="product image" />
+                  </a>
+                  <div class="px-5 pb-5">
+                    <a href="#">
+                      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
+                    </a>
+
+                    <div class="flex items-center justify-between">
+                      <span class="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
+                      <a href="#" class="text-owhite bg-blue-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:scale-95 duration-75 ">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+		<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-24 ">Sports</h1>
+    <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
+          {data.data.filter((prod)=> (prod.attributes.Category === "women" && prod.attributes.subcategory === "sports")).map(prod => (
+            <div key={prod.id} className="">
+              <div className="sellcard">
+
+
+                <div class="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
+                  <a href="#">
+                    <img class="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data.attributes.url}`} alt="product image" />
+                  </a>
+                  <div class="px-5 pb-5">
+                    <a href="#">
+                      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
+                    </a>
+
+                    <div class="flex items-center justify-between">
+                      <span class="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
+                      <a href="#" class="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+
+
+        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-24 ">Tshirts</h1>
+    <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
+          {data.data.filter((prod)=> (prod.attributes.Category === "women" && prod.attributes.subcategory === "tops")).map(prod => (
+            <div key={prod.id} className="">
+              <div className="sellcard">
+
+
+                <div class="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
+                  <a href="#">
+                    <img class="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data.attributes.url}`} alt="product image" />
+                  </a>
+                  <div class="px-5 pb-5">
+                    <a href="#">
+                      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
+                    </a>
+
+                    <div class="flex items-center justify-between">
+                      <span class="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
+                      <a href="#" class="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          ))}
+        </div>
+            
+
+        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-24 ">Dresses</h1>
+    <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
+          {data.data.filter((prod)=> (prod.attributes.Category === "women" && prod.attributes.subcategory === "dress")).map(prod => (
+            <div key={prod.id} className="">
+              <div className="sellcard">
+
+
+                <div class="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
+                  <a href="#">
+                    <img class="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data.attributes.url}`} alt="product image" />
+                  </a>
+                  <div class="px-5 pb-5">
+                    <a href="#">
+                      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
+                    </a>
+
+                    <div class="flex items-center justify-between">
+                      <span class="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
+                      <a href="#" class="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+
+        <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-14">Skirts</h1>
+        <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
+          {data.data.filter((prod)=> (prod.attributes.Category === "women" && prod.attributes.subcategory === "skirts")).map(prod => (
+            <div key={prod.id} className="">
+              <div className="sellcard">
+
+
+                <div class="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet  ">
+                  <a href="#">
+                    <img class="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data.attributes.url}`} alt="product image" />
+                  </a>
+                  <div class="px-5 pb-5">
+                    <a href="#">
+                      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
+                    </a>
+
+                    <div class="flex items-center justify-between">
+                      <span class="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
+                      <a href="#" class="text-owhite bg-blue-700  font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:scale-95 duration-75 ">Add to cart</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+
+        
+	</section>
   )
 }
 
