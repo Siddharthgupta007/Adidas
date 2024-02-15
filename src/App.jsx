@@ -2,7 +2,7 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './index.css'
-import Navbar from './components/Navbar/navbar.jsx'
+import Navbar from './components/navbar/navbar.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import Hero from './components/Hero/Hero.jsx'
 import Mens from './components/Mens/Mens.jsx'
