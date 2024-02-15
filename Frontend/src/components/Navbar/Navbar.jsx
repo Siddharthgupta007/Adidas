@@ -7,22 +7,13 @@ import bag from '../../images/bag.svg'
 
 
 
-const leftNavLinks = [
-    {
-        title: "Navbar",
-        path: "/",
-    },
-    {
-        title: "Mens",
-        path: "/mens",
-    },
-];
+
 
 const Navbar = () => {
     return (
 
         <>
-
+         <header className="palet sticky top-0 z-10">
             <div className="Navbar container">
 
                 <ul className='flex navbar'>
@@ -38,15 +29,15 @@ const Navbar = () => {
                     <div className="flex">
 
                         <div className="men nav-middle gap">
-                            <Link to="/mens">Mens</Link>
+                            <Link className='hov' to="/mens">Mens</Link>
                         </div>
 
                         <div className="Women nav-middle gap">
-                            <Link to="/women">Women</Link>
+                            <Link className='hov' to="/women">Women</Link>
                         </div>
 
                         <div className="kids nav-middle gap">
-                            <Link to="/kids">Kids</Link>
+                            <Link className='hov' to="/kids">Kids</Link>
                         </div>
 
                     </div>
@@ -63,6 +54,10 @@ const Navbar = () => {
 
             </div>
 
+
+
+                
+            </header>
 
         </>
 
