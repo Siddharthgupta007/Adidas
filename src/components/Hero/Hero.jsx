@@ -81,7 +81,7 @@ const Hero = () => {
       <section className="">
         <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
           <h1 className="text-4xl font-bold leadi sm:text-5xl">Premium Gazzeti_
-            <span className=" palet">Collection</span>
+            <span className=" palet rounded-2xl ">Collection</span>
           </h1>
           
           </div>
@@ -89,42 +89,66 @@ const Hero = () => {
       </section>
 
 
-      <div className="collectionCard">
-        <section class="projects">
-          <div class="contain-project">
-            <div class="container flex proj">
+     
+        <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center">
 
-              <div className="project-card bg-slate-200 shadow-2xl rounded-3xl gaz">
-                <a href="#"><img src={shoe} alt="" /></a>
-                <p> Gazzeti Yellow</p>
-                <p> </p>
-                <a href="#" target="_blank"
-                  class="secon-btn transit">Add to Cart</a>
+          
+        <div className="sellcard "> 
+              <div className="w-5/5 rounded-3xl shadow-2xl bg-slate-200">
+                <a href="#">
+                  <img className="py-0 px-12 rounded-t-lg" src={shoe03} alt="product image" />
+                </a>
+               
+                <div className="px-5 pb-5">
+                 
+                  <div className="flex flex-col gap-7 items-center justify-center">
+                    <h1>Gazzeti Blue</h1>
+                  
+                  <a href="#" target="_blank"
+                    className="secon-btn transit">Add to Cart</a>
+                  </div>
+                </div>
               </div>
-              {/* other local cards of shoe */}
-              <div class="project-card  bg-slate-200 shadow-2xl rounded-3xl">
-
-                <a href="#"><img src={shoe02} alt="" /></a>
-                <p> Gazzeti White</p>
-                <p> </p>
-                <a href="#" target="_blank"
-                  class="secon-btn transit">Add to Cart</a>
-              </div>
-
-              <div class="project-card  bg-slate-200 shadow-2xl rounded-3xl">
-
-                <a href="#"><img src={shoe03} alt="" /></a>
-                <p> Gazzeti Yellow</p>
-                <p> </p>
-                <a href="#" target="_blank"
-                  class="secon-btn transit">Add to Cart</a>
-              </div>
-
             </div>
-          </div>
-        </section>
 
-      </div>
+            <div className="sellcard "> 
+              <div className="w-5/5 rounded-3xl shadow-2xl bg-slate-200">
+                <a href="#">
+                  <img className="py-0 px-12 rounded-t-lg" src={shoe02} alt="product image" />
+                </a>
+               
+                <div className="px-5 pb-5">
+                 
+                  <div className="flex flex-col gap-7 items-center justify-center">
+                    <h1>Gazzeti grey</h1>
+                  
+                  <a href="#" target="_blank"
+                    className="secon-btn transit">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="sellcard "> 
+              <div className="w-5/5 rounded-3xl shadow-2xl bg-slate-200">
+                <a href="#">
+                  <img className="py-0 px-12 rounded-t-lg" src={shoe03} alt="product image" />
+                </a>
+               
+                <div className="px-5 pb-5">
+                 
+                  <div className="flex flex-col gap-7 items-center justify-center">
+                    <h1>Gazzeti White</h1>
+                  
+                  <a href="#" target="_blank"
+                    className="secon-btn transit">Add to Cart</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+            
+        </div>
 
       <div className="p-6 py-12 dark:text-gray-900 sale">
         <div className="container mx-auto">
@@ -150,18 +174,18 @@ const Hero = () => {
               <div className="sellcard">
 
 
-                <div class="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
+                <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
                   <a href="#">
-                    <img class="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data.attributes.url}`} alt="product image" />
+                    <img className="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data.attributes.url}`} alt="product image" />
                   </a>
-                  <div class="px-5 pb-5">
+                  <div className="px-5 pb-5">
                     <a href="#">
-                      <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
+                      <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
                     </a>
 
-                    <div class="flex items-center justify-between">
-                      <span class="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
-                      <a href="#" class="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+                    <div className="flex items-center justify-between">
+                      <span className="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
+                      <a href="#" className="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
                     </div>
                   </div>
                 </div>
