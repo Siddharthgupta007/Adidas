@@ -3,12 +3,12 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './index.css'
 import Navbar from './components/Navbar/navbar.jsx'
-import Footer from './components/Footer/Footer'
-import Hero from './components/Hero/Hero'
-import Mens from './components/Mens/Mens'
-import Women from './components/Women/Women'
-import Kids from './components/Kids/Kids'
-import Cart from './components/Cart/Cart'
+import Footer from './components/Footer/Footer.jsx'
+import Hero from './components/Hero/Hero.jsx'
+import Mens from './components/Mens/Mens.jsx'
+import Women from './components/Women/Women.jsx'
+import Kids from './components/Kids/Kids.jsx'
+import Cart from './components/Cart/Cart.jsx'
 
 
 
