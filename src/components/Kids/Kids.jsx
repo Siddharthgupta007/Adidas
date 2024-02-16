@@ -3,7 +3,7 @@ import useFetch from '../../hooks/useFetch'
 
 const Kids = () => {
   
-    const { loading, error, data } = useFetch('http://localhost:1337/api/kids-products?populate=*')
+    const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL_LOCAL+ '/api/kids-products?populate=*')
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error..</p>
@@ -22,7 +22,7 @@ const Kids = () => {
 
                 <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet  ">
                   <a href="#">
-                    <img className="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data[0].attributes.url}`} alt="product image" />
+                    <img className="p-8 rounded-t-lg" src={import.meta.env.VITE_API_URL_LOCAL +`${prod.attributes.image.data[0].attributes.url}`} alt="product image" />
                   </a>
                   <div className="px-5 pb-5">
                     <a href="#">
@@ -52,7 +52,7 @@ const Kids = () => {
 
                 <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet  ">
                   <a href="#">
-                    <img className="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data[0].attributes.url}`} alt="product image" />
+                    <img className="p-8 rounded-t-lg" src={import.meta.env.VITE_API_URL_LOCAL +`${prod.attributes.image.data[0].attributes.url}`} alt="product image" />
                   </a>
                   <div className="px-5 pb-5">
                     <a href="#">
@@ -81,7 +81,7 @@ const Kids = () => {
 
                 <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet  ">
                   <a href="#">
-                    <img className="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data[0].attributes.url}`} alt="product image" />
+                    <img className="p-8 rounded-t-lg" src={import.meta.env.VITE_API_URL_LOCAL +`${prod.attributes.image.data[0].attributes.url}`} alt="product image" />
                   </a>
                   <div className="px-5 pb-5">
                     <a href="#">

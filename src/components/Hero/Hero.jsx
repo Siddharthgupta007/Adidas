@@ -1,7 +1,4 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
-import useSWR from 'swr';
-import shoe from '../../images/shoe02.png'
 import './hero.css'
 import '../../index.css'
 import shoe02 from '../../images/shoe4.png'
@@ -23,7 +20,7 @@ const Hero = () => {
 
 
 
-  const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL+'/mens-products?populate=*')
+  const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL+'/api/mens-products?populate=*')
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error..</p>
@@ -140,8 +137,6 @@ const Hero = () => {
       </div>
 
       <div className="mainhero">
-        {/* <h2 className='container'>Latest Gazzetti Sneakers collection</h2> */}
-
         <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center">
           {data.data.map(prod => (
             <div key={prod.id} className="">
@@ -151,18 +146,18 @@ const Hero = () => {
                 <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
                   <a href="#">
                     
-                    <img className="p-8 rounded-t-lg" src={`https://adibase.onrender.com${prod.attributes.image.data.attributes.url}`} alt="product image" />
+                    <img className="p-8 rounded-t-lg" src={prod.attributes.Image.data.attributes.url} alt="product image" />
                   </a>
-                  {/* <div className="px-5 pb-5">
+                  <div className="px-5 pb-5">
                     <a href="#">
                       <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
                     </a>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
+                      <span className="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Title + '$'}</span>
                       <a href="#" className="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
 
               </div>
