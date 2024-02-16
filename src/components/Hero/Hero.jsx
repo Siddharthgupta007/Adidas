@@ -12,33 +12,7 @@ import useFetch from '../../hooks/useFetch'
 
 
 
-// // Import useSWR from swr package
 
-// // created function to handle API request
-// const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-// const Hero = () => {
-//   const {
-//     data: product,
-//     error,
-//     isValidating,
-//   } = useSWR("http://localhost:1337/api/products?populate=*", fetcher);
-
-//   // Handles error and loading state
-//   if (error) return <div className='failed'>failed to load</div>;
-//   if (isValidating) return <div className="Loading">Loading...</div>;
-
-//   return (
-//     <div>
-//       {product &
-//         product.map((prod, index) => (
-//           <img key={index} src={prod.attributes.image.data.attributes.formats.thumbnail.url} alt='flag' width={100} />
-//         ))}
-//     </div>
-//   );
-// };
-
-// export default Hero;
 
 
 
@@ -49,7 +23,7 @@ const Hero = () => {
 
 
 
-  const { loading, error, data } = useFetch('http://localhost:1337/api/products?populate=*')
+  const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL+'/mens-products?populate=*')
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error..</p>
@@ -176,9 +150,10 @@ const Hero = () => {
 
                 <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
                   <a href="#">
-                    <img className="p-8 rounded-t-lg" src={`http://localhost:1337${prod.attributes.image.data.attributes.url}`} alt="product image" />
+                    
+                    <img className="p-8 rounded-t-lg" src={`https://adibase.onrender.com${prod.attributes.image.data.attributes.url}`} alt="product image" />
                   </a>
-                  <div className="px-5 pb-5">
+                  {/* <div className="px-5 pb-5">
                     <a href="#">
                       <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{prod.attributes.Title}</h5>
                     </a>
@@ -187,7 +162,7 @@ const Hero = () => {
                       <span className="text-3xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
                       <a href="#" className="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
               </div>
