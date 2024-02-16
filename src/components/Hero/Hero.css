@@ -6,19 +6,17 @@
 .hero-right img{
   
     width: 400px;
-    
 }
 
 
 
-.adidas{
+.adidassvg{
     position: absolute;
-    width: 1090px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding-left: 150px;
-    opacity: 30%;
+     width:80%;
+    padding-left:80px;
+    opacity: 20%;
+    z-index: 1;
+    
 }
 
 .video{
@@ -33,13 +31,14 @@
     
 }
 .videoDiv{
-    .video{
-        border-radius: 10rem;
-        width: 100%;
-    }
-
     padding-block: 30px;
   }
+
+video{
+    border-radius: 10rem;
+    width: 100%;
+    z-index: 0;
+}
 
 .header{
     align-items: center;
@@ -48,6 +47,9 @@
     padding-top: 100px ;
 }
 
+.mainhero{
+    padding-bottom: 60px;
+}
 .contain-project{
     /* background-color: #dfd3b1; */
     height: 600px;
@@ -110,19 +112,37 @@
         .adidas{
             width:600px;
         }
+        
     }
     @media only screen and (max-width:700px){
-        .adidas{
-            width:400px;
+        .adidassvg{
+            position: absolute;
+            
+            opacity: 20%;
+            z-index: 1;
+            
         }
     }
     @media only screen and (max-width:500px){
-        .adidas{
-            width:200px;
+        .adidassvg{
+            position: absolute;
+            
+            opacity: 20%;
+            z-index: 1;
+            
+        }
+        .proj{
+            flex-direction:column;
+           
+        }
+
+        .gaz{
+            flex-direction: column;
         }
     }
 
 
     .sale{
         padding-top: 150px;
+        padding-bottom: 150px;
     }

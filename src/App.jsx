@@ -1,14 +1,14 @@
+
 import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './index.css'
-import Navbar from './components/Navbar/Navbar'
-import Footer from './components/Footer/Footer'
-import Hero from './components/Hero/Hero'
-import Mens from './components/Mens/Mens'
-import Women from './components/Women/Women'
-import Kids from './components/Kids/Kids'
-import Cart from './components/Cart/Cart'
-
+import Navbar from './components/navbar/navbar.jsx'
+import Footer from './components/footer/footer.jsx'
+import Hero from './components/hero/hero.jsx'
+import Mens from './components/mens/mens.jsx'
+import Women from './components/women/women.jsx'
+import Kids from './components/kids/kids.jsx'
+import Cart from './components/cart/cart.jsx'
 
 
 
@@ -27,6 +27,7 @@ function App() {
         <Route path="/kids" element={<Kids/>} />
         <Route path="/cart" element={<Cart/>} />
       </Routes>
+      
       <Footer/>
       
     </BrowserRouter>

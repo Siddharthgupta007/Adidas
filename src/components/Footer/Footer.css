@@ -4,6 +4,7 @@ footer{
     border-style: solid;
     border-color: aliceblue;
     background-color: orange;
+    
 }
 
 
@@ -14,9 +15,9 @@ footer{
     
     padding-inline: 40px;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 60px;
   background-color: orange;
-  width:100%;
+  width:100%; 
 }
 
 .left-footer{
