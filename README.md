@@ -1,11 +1,16 @@
-# Adidas Clone Website
+# Adidas E-commerce Website
 
-![adidas](https://github.com/Siddharthgupta007/Adidas/assets/118587047/396b3456-5010-45d5-b275-65252919cf2f)
+![adidas](https://github.com/Siddharthgupta007/Adidas/assets/118587047/c2fa02c6-787d-4671-8253-3fdf727795e3)
+
 
 
 ## Overview
 
 This project is a Ecommerce clone of the Adidas website, developed using ReactJS for the front-end, Tailwind CSS, Mumbai UI, Daisy Why, and Flow Bite for styling. The back-end is powered by Node.js with Express using Daisy Why and Flow Bite, and the database is PostgreSQL 12. Version control is managed with Git and hosted on GitHub. The deployment is handled through Render.
+
+
+ **Live**:https://65cf698410442f042b59540f--deft-malabi-6de791.netlify.app/
+
 
 ## Features
 
@@ -34,7 +39,7 @@ This project is a Ecommerce clone of the Adidas website, developed using ReactJS
 
 3. **Install Node.js dependencies:**
    ```bash
-   npm install.
+   npm install
 
 
 #### 4.Set up the database:
@@ -49,3 +54,5 @@ This project is a Ecommerce clone of the Adidas website, developed using ReactJS
 ## Acknowledgments
 
 - Thank you to the creators of ReactJS, Tailwind CSS, Mumbai UI, Daisy Why, Flow Bite, Node.js, PostgreSQL, Git, GitHub, and Render for the tools and platforms that make this project possible.
+
+
