@@ -35,7 +35,7 @@ This project is a Ecommerce clone of the Adidas website, developed using ReactJS
 
 2. **Navigate to the project directory:**
    ```bash
-   cd adidas-clone
+   cd adidas
 
 3. **Install Node.js dependencies:**
    ```bash
