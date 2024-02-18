@@ -1,5 +1,8 @@
 # Adidas Clone Website
 
+![adidas](https://github.com/Siddharthgupta007/Adidas/assets/118587047/396b3456-5010-45d5-b275-65252919cf2f)
+
+
 ## Overview
 
 This project is a Ecommerce clone of the Adidas website, developed using ReactJS for the front-end, Tailwind CSS, Mumbai UI, Daisy Why, and Flow Bite for styling. The back-end is powered by Node.js with Express using Daisy Why and Flow Bite, and the database is PostgreSQL 12. Version control is managed with Git and hosted on GitHub. The deployment is handled through Render.
