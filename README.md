@@ -6,7 +6,7 @@
 
 ## Overview
 
-This project is a Ecommerce clone of the Adidas website, developed using ReactJS for the front-end, Tailwind CSS, Mumbai UI, Daisy Why, and Flow Bite for styling. The back-end is powered by Node.js with Express using Daisy Why and Flow Bite, and the database is PostgreSQL 12. Version control is managed with Git and hosted on GitHub. The deployment is handled through Render.
+This project is a Ecommerce clone of the Adidas website, developed using ReactJS for the front-end, Tailwind CSS, Mumbai UI, Daisy Why, and Flow Bite for styling. The back-end is powered by Node.js using Strapi CMS , and the database is PostgreSQL 12. Version control is managed with Git and hosted on GitHub. The deployment is handled through Render.
 
 
  **Live**:https://65cf698410442f042b59540f--deft-malabi-6de791.netlify.app/
@@ -16,10 +16,10 @@ This project is a Ecommerce clone of the Adidas website, developed using ReactJS
 
 - **ReactJS Front-end:** Utilizing ReactJS for building a dynamic and responsive user interface.
 - **Tailwind CSS, Mumbai UI, Daisy Why, and Flow Bite:** Leveraging these libraries for efficient and modern styling.
-- **Node.js Back-end:** Using Express to create a robust back-end structure.
+- **Node.js Back-end:** Using Strapi CMS to create a robust back-end structure.
 - **PostgreSQL 12 Database:** Storing and managing data with the powerful PostgreSQL database.
 - **Git and GitHub:** Version control and collaboration through Git, hosted on GitHub.
-- **Render Deployment:** Deploying the application on Render for seamless hosting and scaling.
+- **Render and Netlify Deployment:** Deploying the application on Render for seamless hosting and scaling.
 
 ## Prerequisites
 
