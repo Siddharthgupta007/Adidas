@@ -5,7 +5,7 @@ const Women = () => {
 
 	
 
-  const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL_LOCAL+'/api/products?populate=*')
+  const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL_LOCAL+'/api/women-products?populate=*')
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error..</p>

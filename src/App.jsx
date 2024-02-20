@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './index.css'
 import Navbar from './components/navbar/navbar.jsx'
 import Footer from './components/footer/footer.jsx'
-import Hero from './components/hero/hero.jsx'
+import Hero from './components/Hero/Hero.jsx'
 import Mens from './components/mens/mens.jsx'
 import Women from './components/women/women.jsx'
 import Kids from './components/kids/kids.jsx'
