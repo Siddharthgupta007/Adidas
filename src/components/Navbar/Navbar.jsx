@@ -13,50 +13,53 @@ const Navbar = () => {
     return (
 
         <>
-         <header className="palet sticky top-0 z-10">
-            <div className="Navbar container">
-
-                <ul className='flex navbar'>
-
-                    <div className="nav-left">
-                        <Link to="/">
-                            <img src={adid} alt="" />
-                        </Link>
-
-                    </div>
+            <header className="palet sticky top-0 z-10">
+                <div className="Navbar container">
 
 
-                    <div className="flex">
 
-                        <div className="men nav-middle gap">
-                            <Link className='hov' to="/mens">Mens</Link>
+                    <ul className='flex navbar'>
+
+                        <div className="nav-left">
+                            <Link to="/">
+                                <img src={adid} alt="" />
+                            </Link>
+
                         </div>
 
-                        <div className="Women nav-middle gap">
-                            <Link className='hov' to="/women">Women</Link>
+
+                        <div className="flex navbar-middle">
+
+                            <div className="men nav-middle gap">
+                                <Link className='hov' to="/mens">Mens</Link>
+                            </div>
+
+                            <div className="Women nav-middle gap">
+                                <Link className='hov' to="/women">Women</Link>
+                            </div>
+
+                            <div className="kids nav-middle gap">
+                                <Link className='hov' to="/kids">Kids</Link>
+                            </div>
+
                         </div>
 
-                        <div className="kids nav-middle gap">
-                            <Link className='hov' to="/kids">Kids</Link>
+                        <div className="nav-right">
+                            <Link to="/cart">
+                                <img className='search' src={bag} alt="" />
+                            </Link>
+
                         </div>
+                    </ul>
 
-                    </div>
+                    {/* hjgjhgfjhjhvghjc */}
 
-                    <div className="nav-right">
-                    <Link to="/cart">
-                    <img className='search' src={bag} alt="" />
-                    </Link>
-                       
-                    </div>
-                </ul>
-
-                {/* hjgjhgfjhjhvghjc */}
-
-            </div>
+                </div>
 
 
 
-                
+
+
             </header>
 
         </>
