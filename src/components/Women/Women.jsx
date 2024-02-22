@@ -25,13 +25,11 @@ const Women = () => {
 	<section>
     
 
-	 <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-24 ">Sports</h1>
+	 <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-14 ">Sports</h1>
     <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
           {data.data.filter((prod)=> (prod.attributes.subcategory === "sportshoe")).map(prod => (
             <div key={prod.id} className="">
               <div className="sellcard">
-
-
                 <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet  ">
                   <a href="#">
                     <img className="p-8 rounded-t-lg" src={prod.attributes.Image.data.attributes.url} alt="product image" />

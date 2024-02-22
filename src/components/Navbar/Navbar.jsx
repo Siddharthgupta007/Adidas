@@ -1,75 +1,50 @@
 import React from 'react'
-import { Link } from "react-router-dom"
 import './Navbar.css'
 import '../../index.css'
+import { useState } from 'react'
+import { Link, NavLink } from "react-router-dom";
 import adid from '../../images/adidasSVG01.svg'
 import bag from '../../images/bag.svg'
+    
 
+ const Navbar = () => {
+      const [menuOpen, setMenuOpen] = useState(false);
 
-
-
-
-const Navbar = () => {
-    return (
-
+      return (
         <>
-            <header className="palet sticky top-0 z-10">
-                <div className="Navbar container">
+        <nav className="palet">
+          <Link to="/" className="title logo">
+            <img src={adid} alt="" />
+          </Link>
+          <div className="menu" onClick={() => setMenuOpen(!menuOpen) }>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul className={menuOpen ? "open" : ""}>
+            <li className="px-6">
+              <NavLink to="/mens">Mens</NavLink>
+            </li>
+            <li className="px-6">
+              <NavLink to="/women">Women</NavLink>
+            </li>
+            <li className="px-6">
+              <NavLink to="/kids">Kids</NavLink>
+            </li>
+          </ul>
 
+      
+       <div className="cart">
+         <Link to="/cart">
+           <img className='search' src={bag} alt="" />
+       </Link>
+       </div>
 
+   
+    </nav>
 
-                    <ul className='flex navbar'>
+    </>
+  );
+};
 
-                        <div className="nav-left">
-                            <Link to="/">
-                                <img src={adid} alt="" />
-                            </Link>
-
-                        </div>
-
-
-                        <div className="flex navbar-middle">
-
-                            <div className="men nav-middle gap">
-                                <Link className='hov' to="/mens">Mens</Link>
-                            </div>
-
-                            <div className="Women nav-middle gap">
-                                <Link className='hov' to="/women">Women</Link>
-                            </div>
-
-                            <div className="kids nav-middle gap">
-                                <Link className='hov' to="/kids">Kids</Link>
-                            </div>
-
-                        </div>
-
-                        <div className="nav-right">
-                            <Link to="/cart">
-                                <img className='search' src={bag} alt="" />
-                            </Link>
-
-                        </div>
-                    </ul>
-
-                    {/* hjgjhgfjhjhvghjc */}
-
-                </div>
-
-
-
-
-
-            </header>
-
-        </>
-
-    )
-}
-
-export default Navbar
-
-
-
-
-
+export default Navbar;

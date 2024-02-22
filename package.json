@@ -10,11 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "flowbite": "^2.3.0",
+    "flowbite-react": "^0.7.2",
     "framer-motion": "^11.0.3",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "react-offcanvas": "^0.4.0",
     "react-router-dom": "^6.21.3",
     "sort-by": "^0.0.2",
     "swr": "^2.2.4"

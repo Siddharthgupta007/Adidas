@@ -1,28 +1,26 @@
 import React from 'react'
-import './hero.css'
+import { useState } from 'react'
+import './Hero.css'
 import '../../index.css'
 import shoe02 from '../../images/shoe4.png'
 import shoe03 from '../../images/shoe3.png'
 import video from '../../images/ad01.mp4'
 import bigadidas from '../../images/addidasSVG.svg'
 import useFetch from '../../hooks/useFetch'
-
-
-
-
-
-
-
+import Card from '../Cards/Cards'
 
 
 const Hero = () => {
 
-
-
-
   const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL+'/api/mens-products?populate=*')
+  const [Key, setkey] = useState("");
+  const [Url, setUrl] = useState("");
+  const [Title, setTitle] = useState("");
+  const [Price, setPrice] = useState("");
 
-  if (loading) return <div class="text-center py-6">
+
+
+ if (loading) return <div class="text-center py-6">
   <div role="status">
       <svg aria-hidden="true" class="inline w-8 h-8 text-white-200 animate-spin  fill-orange-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
@@ -35,20 +33,11 @@ const Hero = () => {
 
   console.log(data);
 
+
+
   return (
 
-
-
-
-
     <div className="hero container">
-
-
-
-
-
-
-
       <div className="homeimage">
         <div className="videoDiv ">
           <img className="adidassvg flex items-center justify-center w-100" src={bigadidas} alt="" />
@@ -69,11 +58,9 @@ const Hero = () => {
 
 
      
-        <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center">
-
-          
-        <div className="sellcard "> 
-              <div className="w-5/5 rounded-3xl shadow-2xl bg-slate-200">
+        <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center">        
+        <div className="sellcard"> 
+              <div className=" animini w-5/5 rounded-3xl shadow-2xl bg-slate-200">
                 <a href="#">
                   <img className="py-0 px-12 rounded-t-lg" src={shoe03} alt="product image" />
                 </a>
@@ -91,7 +78,7 @@ const Hero = () => {
             </div>
 
             <div className="sellcard "> 
-              <div className="w-5/5 rounded-3xl shadow-2xl bg-slate-200">
+              <div className="animini w-5/5 rounded-3xl shadow-2xl bg-slate-200">
                 <a href="#">
                   <img className="py-0 px-12 rounded-t-lg" src={shoe02} alt="product image" />
                 </a>
@@ -108,7 +95,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="sellcard "> 
-              <div className="w-5/5 rounded-3xl shadow-2xl bg-slate-200">
+              <div className=" animini w-5/5 rounded-3xl shadow-2xl bg-slate-200">
                 <a href="#">
                   <img className="py-0 px-12 rounded-t-lg" src={shoe03} alt="product image" />
                 </a>
@@ -145,6 +132,7 @@ const Hero = () => {
       </div>
 
       <div className="mainhero">
+
         <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center">
           {data.data.map(prod => (
             <div key={prod.id} className="">
@@ -173,14 +161,6 @@ const Hero = () => {
             </div>
           ))}
         </div>
-
-
-        {/* tailblocks cards */}
-
-
-
-
-
 
       </div>
     </div>

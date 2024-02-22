@@ -1,10 +1,9 @@
 /* video tak ka mamla */
 .hero{
-    justify-content: space-between;
+        
     position: relative;
 }
 .hero-right img{
-  
     width: 400px;
 }
 
@@ -20,7 +19,7 @@
 }
 
 .video{
-   opacity: 100%;
+   opacity:100%;
 }
 
 .tagline{
@@ -37,7 +36,7 @@
 video{
     border-radius: 10rem;
     width: 100%;
-    z-index: 0;
+    z-index:0;
 }
 
 .header{
@@ -46,6 +45,8 @@ video{
     text-align: center;
     padding-top: 100px ;
 }
+
+/* main hero section  */
 
 .mainhero{
     padding-bottom: 60px;
@@ -56,57 +57,6 @@ video{
     width: 100%;
     }
 
-    .contain-project h1{
-        text-align: center;
-        padding: 20px 0px;
-        font-size: 1.5rem;
-    }
-    
-    .proj{
-        justify-content: space-between;
-        text-align: center;
-    }
-    .project-card{
-        margin: 50px 0px;
-        width: 31%;
-        height: 400px;
-        /* border: 2px solid; */
-        padding: 0px 10px;
-        transition: 0.1s ease-out;
-       
-    }
-
-    .project-card:hover{
-        /* border-color: var(--hover-color); */
-        /* color: var(--hover-color) !important; */
-        /* border-color: rgb(118, 4, 4) !important; */
-        /* color: rgb(118, 4, 4); */
-        
-        transform: scale(1.1);
-        
-    }
-    
-    .project-card a:hover{
-        /* border-color: rgb(118, 4, 4) !important;
-        color: rgb(118, 4, 4) !important; */
-        color: black !important;
-        border-color: black;
-        /* background-color:darkgrey !important; */
-    }
-    
-    .project-card h2{
-        margin: 10px 0px;
-        font-size: medium;
-    }
-    
-    .project-card img{
-        width: 200px ;
-        /* border: 3px solid;
-        border-color: black; */
-    }
-    .project-card img:hover{
-        border-color: rgb(118, 4, 4) !important;
-    }
 
     @media only screen and (max-width:900px){
         .adidas{

@@ -10,16 +10,12 @@
   margin:0px;
   padding: 0px;
   box-sizing: border-box;
-  
-  
   font-family: 'Roboto Condensed';
-  color: black;
 }
 
 :root{  
 
   --first-color:#02010c;
-  --hover-color:#3d5cb7;
   --fix-padding:20px;
   
   background: rgb(238,238,238);
@@ -111,6 +107,13 @@ p{
 }
 
 /* animation */
+
+.animini{
+  transition: 0.2s;
+}
+.animini:hover{
+  transform: scale(1.02);
+}
 
 .transit{
   transition: 0.2s;
