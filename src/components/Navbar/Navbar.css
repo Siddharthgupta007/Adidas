@@ -1,69 +1,73 @@
-.header{
-    z-index: 1;
-    position: fixed;    
-    
+.header {
+    z-index: 60;
+    position: fixed;
 }
 
-.logo img{
+.logo img {
     width: 50px;
     height: 50px;
-    
+
 }
 
-.cart{
+.cart {
     padding-right: 1rem;
 }
-.search{
+
+.search {
     width: 29px;
 }
 
 /* navbar */
-.navbar{
+.navbar {
     justify-content: space-between;
     padding: 20px 15px;
     align-items: center;
 }
 
-.nav{
+.nav {
     /* justify-content: space-between; */
     gap: 10px;
-    
+
 }
 
-.nav-elements{
+.nav-elements {
     transition: 0.2s;
 }
-.nav-elements:hover{
+
+.nav-elements:hover {
     transform: scale(1.1);
 }
 
-.nav_middle{
-  padding-inline: 20px;
-  align-items: center;
+.nav_middle {
+    padding-inline: 20px;
+    align-items: center;
 }
 
-.nav-right img{
-    padding-right:5px;
+.nav-right img {
+    padding-right: 5px;
 }
-.gap{
+
+.gap {
     padding-inline: 30px;
 }
 
 /* routers*/
-.hov{
-    padding:5px;
+.hov {
+    padding: 5px;
 }
-.hov:hover{
-    background-color: rgb(238,238,238);
-    padding:5px;
+
+.hov:hover {
+    background-color: rgb(238, 238, 238);
+    padding: 5px;
     border-radius: 30%;
 }
 
-@media only screen and (max-width:500px){
-    .nav-left{
+@media only screen and (max-width:500px) {
+    .nav-left {
         display: none;
     }
-    .nav-right{
+
+    .nav-right {
         display: none;
     }
 }
@@ -71,12 +75,14 @@
 
 
 
-.active{
-  color: black;
+.active {
+    color: black;
 }
-.active:hover{
-    background: rgb(238,238,238);
-    background: linear-gradient(90deg, rgba(238,238,238,1) 100%, rgba(0,255,233,1) 100%);;
+
+.active:hover {
+    background: rgb(238, 238, 238);
+    background: linear-gradient(90deg, rgba(238, 238, 238, 1) 100%, rgba(0, 255, 233, 1) 100%);
+    ;
 }
 
 nav {
@@ -86,7 +92,7 @@ nav {
     z-index: 50;
     position: sticky;
     top: 0;
-    
+
 
 }
 
@@ -103,7 +109,7 @@ nav ul {
 }
 
 nav ul li {
-   list-style: none; 
+    list-style: none;
 }
 
 nav ul li a {
@@ -116,8 +122,8 @@ nav ul li a {
 }
 
 nav ul li a:not(.active):hover {
-    background: rgb(238,238,238);
-  background: linear-gradient(90deg, rgba(238,238,238,1) 100%, rgba(0,255,233,1) 100%);
+    background: rgb(238, 238, 238);
+    background: linear-gradient(90deg, rgba(238, 238, 238, 1) 100%, rgba(0, 255, 233, 1) 100%);
 }
 
 nav .menu {
@@ -129,7 +135,7 @@ nav .menu {
     justify-content: space-between;
     width: 2rem;
     height: 1.5rem;
-   
+
 }
 
 
@@ -146,7 +152,7 @@ nav .menu span {
         display: flex;
     }
 
-    .cart{
+    .cart {
         display: none;
     }
 

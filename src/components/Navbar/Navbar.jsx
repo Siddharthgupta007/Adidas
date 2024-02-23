@@ -5,43 +5,48 @@ import { useState } from 'react'
 import { Link, NavLink } from "react-router-dom";
 import adid from '../../images/adidasSVG01.svg'
 import bag from '../../images/bag.svg'
-    
 
- const Navbar = () => {
-      const [menuOpen, setMenuOpen] = useState(false);
 
-      return (
-        <>
-        <nav className="palet">
-          <Link to="/" className="title logo">
-            <img src={adid} alt="" />
+const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [items, setitmes] = useState(0);
+
+
+
+  return (
+    <>
+      <nav className="palet">
+        <Link to="/" className="title logo">
+          <img src={adid} alt="" />
+        </Link>
+        <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul className={menuOpen ? "open" : ""}>
+          <li className="px-6">
+            <NavLink to="/mens">Mens</NavLink>
+          </li>
+          <li className="px-6">
+            <NavLink to="/women">Women</NavLink>
+          </li>
+          <li className="px-6">
+            <NavLink to="/kids">Kids</NavLink>
+          </li>
+        </ul>
+
+
+        <div className="cart flex">
+
+          <Link to="/cart">
+            <img className='search' src={bag} alt="" />
           </Link>
-          <div className="menu" onClick={() => setMenuOpen(!menuOpen) }>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <ul className={menuOpen ? "open" : ""}>
-            <li className="px-6">
-              <NavLink to="/mens">Mens</NavLink>
-            </li>
-            <li className="px-6">
-              <NavLink to="/women">Women</NavLink>
-            </li>
-            <li className="px-6">
-              <NavLink to="/kids">Kids</NavLink>
-            </li>
-          </ul>
+          <p>({items})</p>
+        </div>
 
-      
-       <div className="cart">
-         <Link to="/cart">
-           <img className='search' src={bag} alt="" />
-       </Link>
-       </div>
 
-   
-    </nav>
+      </nav>
 
     </>
   );
