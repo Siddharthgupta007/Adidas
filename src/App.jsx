@@ -4,12 +4,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import './index.css'
 import Navbar from './components/Navbar/Navbar.jsx'
-import Footer from './components/footer/footer.jsx'
+import Footer from './components/Footer/Footer.jsx'
 import Hero from './components/Hero/Hero.jsx'
 import Mens from './components/Mens/Mens.jsx'
 import Women from './components/Women/Women.jsx'
 import Kids from './components/Kids/Kids.jsx'
-import Cart from './components/cart/cart.jsx'
+import Cart from './components/Cart/Cart.jsx'
 
 //import Sidebar from './hooks/Sidebar.js'
 
