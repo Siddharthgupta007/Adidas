@@ -56,22 +56,22 @@ const Hero = () => {
           <div className="relative flex flex-wrap items-center justify-center w-full dark:text-gray-50">
            
             <div className="flex items-center justify-start w-full h-full gap-6 py-4 mx-auto overflow-auto lg:gap-8">
-              <div className="relative flex flex-shrink-0 w-full sm:w-auto">
+              <div className="relative flex flex-shrink-0 w-50 sm:w-auto">
                 <img className="object-cover object-center dark:bg-gray-500 h-96 aspect-square" src="https://res.cloudinary.com/dkioj30sz/image/upload/v1708709101/INDIA_CRICKET_ODI_JERSEY_MEN_Blue_JE_0098_25_model_78a5d67c7d.jpg" alt="Image 1" />
               </div>  
-              <div className="relative flex flex-shrink-0 w-full sm:w-auto">
+              <div className="relative flex flex-shrink-0 w-50 sm:w-auto">
                 <img className="object-cover object-center dark:bg-gray-500 h-96 aspect-square" src="https://res.cloudinary.com/dkioj30sz/image/upload/v1708709101/INDIA_CRICKET_ODI_JERSEY_MEN_Blue_JE_0098_42_detail_3a43ea9ca2.jpg" alt="Image 2" />
               </div>
-              <div className="relative flex flex-shrink-0 w-full sm:w-auto">
+              <div className="relative flex flex-shrink-0 w-50 sm:w-auto">
                 <img className="object-cover object-center dark:bg-gray-500 h-96 aspect-square" src="https://res.cloudinary.com/dkioj30sz/image/upload/v1708709101/INDIA_CRICKET_ODI_JERSEY_MEN_Blue_JE_0098_21_model_74f29da5dd.jpg" alt="Image 3" />
               </div>
-              <div className="relative flex flex-shrink-0 w-full sm:w-auto">
+              <div className="relative flex flex-shrink-0 w-50 sm:w-auto">
                 <img className="object-cover object-center dark:bg-gray-500 h-96 aspect-square" src="https://res.cloudinary.com/dkioj30sz/image/upload/v1708709101/T20_INTERNATIONAL_CRICKET_JERSEY_Blue_JE_0093_21_model_64d0832f5a.jpg" alt="Image 4" />
               </div>
-              <div className="relative flex flex-shrink-0 w-full sm:w-auto">
+              <div className="relative flex flex-shrink-0 w-50 sm:w-auto">
                 <img className="object-cover object-center dark:bg-gray-500 h-96 aspect-square" src="https://res.cloudinary.com/dkioj30sz/image/upload/v1708709101/INDIA_CRICKET_ODI_JERSEY_MEN_Blue_JE_0098_22_model_9351bab77b.jpg" alt="Image 5" />
               </div>
-              <div className="relative flex flex-shrink-0 w-full sm:w-auto">
+              <div className="relative flex flex-shrink-0 w-50 sm:w-auto">
                 <img className="object-cover object-center dark:bg-gray-500 h-96 aspect-square" src="https://res.cloudinary.com/dkioj30sz/image/upload/v1708709101/INDIA_CRICKET_ODI_JERSEY_MEN_Blue_JE_0098_23_hover_model_373d5fbbb0.jpg" alt="Image 5" />
               </div>
             </div>  
@@ -116,7 +116,7 @@ const Hero = () => {
       <div className="mainhero container">
 
         <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center">
-          {data.data.map(skeleton)};
+          {data.data.map(skeleton)}
         </div>
 
       </div>

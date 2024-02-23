@@ -3,7 +3,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 import './index.css'
-import Navbar from './components/Navbar/navbar.jsx'
+import Navbar from './components/Navbar/Navbar.jsx'
 import Footer from './components/footer/footer.jsx'
 import Hero from './components/Hero/Hero.jsx'
 import Mens from './components/Mens/Mens.jsx'
@@ -36,9 +36,6 @@ function App() {
       <Footer/>
       
     </BrowserRouter>
-
-   
-
 
     </>
   )
