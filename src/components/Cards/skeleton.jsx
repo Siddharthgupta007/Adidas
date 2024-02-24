@@ -1,9 +1,13 @@
 import React from "react";
+import ProDetails from "./ProDetails";
+import { NavLink, Link} from 'react-router-dom';
 
 const skeleton = (prod) => {
   return (
     <div key={prod.id} className="">
-      <div className="sellcard">
+       
+      <Link to={`/productdetails/${prod.id}`}>
+      <div className="sellcard" onClick={()=> ProDetails(prod = prod)}>
 
 
         <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
@@ -18,12 +22,15 @@ const skeleton = (prod) => {
 
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-gray-900 dark:text-white">{prod.attributes.Price + '$'}</span>
-              <a href="#" className="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:scale-95 duration-75">Add to cart</a>
+              <a href="#" className="text-owhite bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center owhite dark:hover:bg-blue-700 dark:focus:ring-blue-800 hover:scale-95 duration-75">
+                Add to cart
+                </a>
             </div>
           </div>
         </div>
 
       </div>
+      </Link>
     </div>
   );
 }

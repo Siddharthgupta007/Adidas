@@ -34,6 +34,7 @@ const Navbar = () => {
           <li className="px-6">
             <NavLink to="/kids">Kids</NavLink>
           </li>
+          
         </ul>
 
 

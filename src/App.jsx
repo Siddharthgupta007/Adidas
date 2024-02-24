@@ -10,8 +10,7 @@ import Mens from './components/Mens/Mens.jsx'
 import Women from './components/Women/Women.jsx'
 import Kids from './components/Kids/Kids.jsx'
 import Cart from './components/Cart/Cart.jsx'
-
-//import Sidebar from './hooks/Sidebar.js'
+import ProDetails from './components/Cards/ProDetails.jsx'
 
 
 
@@ -31,6 +30,7 @@ function App() {
         <Route path="/women" element={<Women/>} />
         <Route path="/kids" element={<Kids/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="/productdetails/:id" element={<ProDetails/>} />
       </Routes>
       
       <Footer/>
