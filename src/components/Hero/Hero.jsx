@@ -1,6 +1,7 @@
 import React from 'react'
 import useFetch from '../../hooks/useFetch'
 import gazzeticard from '../Cards/gazzeticard'
+import skeletonmens from '../Cards/skeletons/skeletonmens'
 import skeleton from '../Cards/skeleton'
 import './Hero.css'
 import '../../index.css'
@@ -116,7 +117,7 @@ const Hero = () => {
       <div className="mainhero container">
 
         <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center">
-          {data.data.map(skeleton)}
+          {data.data.map(skeletonmens)}
         </div>
 
       </div>

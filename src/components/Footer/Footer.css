@@ -3,6 +3,7 @@ footer {
   border-style: solid;
   border-color: aliceblue;
   background-color: orange;
+  position:relative;
 
 }
 

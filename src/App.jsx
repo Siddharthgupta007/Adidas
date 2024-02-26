@@ -11,6 +11,10 @@ import Women from './components/Women/Women.jsx'
 import Kids from './components/Kids/Kids.jsx'
 import Cart from './components/Cart/Cart.jsx'
 import ProDetails from './components/Cards/ProDetails.jsx'
+import Singleprod from './components/Cards/Singleprod.jsx'
+import ProDetailsMens from './components/Cards/proddetails/ProdeatailsMens.jsx'
+import ProDetailsWomen from './components/Cards/proddetails/ProdetailsWomen.jsx'
+import ProDetailsKids from './components/Cards/proddetails/ProdetailsKids.jsx'
 
 
 
@@ -31,6 +35,10 @@ function App() {
         <Route path="/kids" element={<Kids/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/productdetails/:id" element={<ProDetails/>} />
+        <Route path="/singleproduct/:id" element={<Singleprod/>} />
+        <Route path="/ProDetailsMens/:id" element={<ProDetailsMens/>} />
+        <Route path="/ProDetailsWomen/:id" element={<ProDetailsWomen/>} />
+        <Route path="/ProDetailsKids/:id" element={<ProDetailsKids/>} />
       </Routes>
       
       <Footer/>

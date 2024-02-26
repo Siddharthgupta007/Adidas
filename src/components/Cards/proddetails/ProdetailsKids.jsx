@@ -1,12 +1,11 @@
 import React from 'react'
-import { useNavigate, useParams } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
+import { useParams,useNavigate } from 'react-router-dom';
+import useFetch from '../../../hooks/useFetch';
 
-const ProDetails = () => {
-
-    const navigate = useNavigate()
-    const {id} = useParams()
-    const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL +`/api/mens-products/${id}?populate=*`)
+const ProDetailsKids = () => {
+    const navigate = useNavigate();
+    const {id} = useParams();
+    const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL + `/api/kids-products/${id}?populate=*`)
 
     if (loading) return <div className="text-center py-6">
     <div role="status">
@@ -115,4 +114,4 @@ const ProDetails = () => {
     );
 }
 
-export default ProDetails
+export default ProDetailsKids

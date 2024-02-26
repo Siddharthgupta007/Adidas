@@ -1,9 +1,9 @@
 import React from "react";
-import ProDetails from "./ProDetails";
 import {Link,useNavigate} from 'react-router-dom';
-import Singleprod from "./Singleprod";
+import ProDetailsWomen from "../proddetails/ProdetailsWomen";
 
-const skeleton = (prod) => {
+
+const skeletonwomen = (prod) => {
   //const navigate = useNavigate();
   const handleCart = (product, redirect) => {
    
@@ -40,8 +40,8 @@ const skeleton = (prod) => {
       
         <div className="w-5/5 max-w-lg bg-white border border-gray-200 rounded-lg shadow-2xl palet">
           <a href="#">
-          <Link to={`/productdetails/${prod.id}`}>
-            <img className="p-8 rounded-t-lg" src={prod.attributes.Image.data.attributes.url} alt="product image" onClick={()=> ProDetails()}/>
+          <Link to={`/ProDetailsWomen/${prod.id}`}>
+            <img className="p-8 rounded-t-lg" src={prod.attributes.Image.data.attributes.url} alt="product image" onClick={()=> ProDetailsWomen()}/>
             </Link>
           </a>
           <div className="px-5 pb-5">
@@ -68,5 +68,5 @@ const skeleton = (prod) => {
     </div>
   );
 }
-export default skeleton;
+export default skeletonwomen;
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import skeleton from '../Cards/skeleton'
+import skeletonkids from '../Cards/skeletons/skeletonkids'
 import useFetch from '../../hooks/useFetch'
 
 const Kids = () => {
@@ -25,19 +25,19 @@ const Kids = () => {
 
       <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-14">Shirts</h1>
       <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
-        {data.data.filter((prod) => (prod.attributes.Subcategory === "shirt")).map(skeleton)}
+        {data.data.filter((prod) => (prod.attributes.Subcategory === "shirt")).map(skeletonkids)}
       </div>
 
 
       <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-14">Sneakers</h1>
       <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
-        {data.data.filter((prod) => (prod.attributes.Subcategory === "sneaker")).map(skeleton)}
+        {data.data.filter((prod) => (prod.attributes.Subcategory === "sneaker")).map(skeletonkids)}
       </div>
 
 
       <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl  lg:text-6xl text-center py-14">Sports Shoes</h1>
       <div className=" mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 justify-center container">
-        {data.data.filter((prod) => (prod.attributes.Subcategory === "sportshoe")).map(skeleton)}
+        {data.data.filter((prod) => (prod.attributes.Subcategory === "sportshoe")).map(skeletonkids)}
       </div>
 
 

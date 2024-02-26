@@ -10,6 +10,7 @@ import bag from '../../images/bag.svg'
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [items, setitmes] = useState(0);
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
 
@@ -19,6 +20,8 @@ const Navbar = () => {
         <Link to="/" className="title logo">
           <img src={adid} alt="" />
         </Link>
+
+
         <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
           <span></span>
           <span></span>
@@ -38,13 +41,17 @@ const Navbar = () => {
         </ul>
 
 
-        <div className="cart flex">
-
-          <Link to="/cart">
+        <ul className={menuOpen ? "open" : ""}>
+          <li className="">
+          <NavLink to="/cart">
+            <div className="flex justify-center">
             <img className='search' src={bag} alt="" />
-          </Link>
-          <p>({items})</p>
-        </div>
+            <p>({cart.length})</p>
+            </div>
+          </NavLink>
+          
+          </li>
+        </ul>
 
 
       </nav>
