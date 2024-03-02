@@ -37,7 +37,7 @@ function cart() {
 	
 	  const handleDec = (id) => {
 		const updatedCart = cart.map(item => {
-		  if(item.id === id) {
+		  if(item.id === id && item.quantity >= 2) {
 			return {
 			  ...item,
 			  quantity: item.quantity - 1
