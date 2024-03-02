@@ -2,7 +2,6 @@ import React from 'react'
 import useFetch from '../../hooks/useFetch'
 import gazzeticard from '../Cards/gazzeticard'
 import skeletonmens from '../Cards/skeletons/skeletonmens'
-import skeleton from '../Cards/skeleton'
 import './Hero.css'
 import '../../index.css'
 import shoe02 from '../../images/shoe4.png'
@@ -75,8 +74,7 @@ const Hero = () => {
               <div className="relative flex flex-shrink-0 w-full sm:w-auto">
                 <img className="object-cover object-center dark:bg-gray-500 h-96 aspect-square" src="https://res.cloudinary.com/dkioj30sz/image/upload/v1708709101/INDIA_CRICKET_ODI_JERSEY_MEN_Blue_JE_0098_23_hover_model_373d5fbbb0.jpg" alt="Image 5" />
               </div>
-            </div>  
-            
+            </div>              
           </div>
         </div>
         <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 lg:pb-5 xl:max-w-3xl">
@@ -86,7 +84,6 @@ const Hero = () => {
               <span className=" palet rounded-2xl ">Collection</span>
             </p>
           </h1>
-
         </div>
 
       </section>

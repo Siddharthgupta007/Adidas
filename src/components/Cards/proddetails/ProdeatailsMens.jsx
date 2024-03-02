@@ -2,8 +2,10 @@ import React from 'react'
 import { useParams,useNavigate } from 'react-router-dom';
 import useFetch from '../../../hooks/useFetch';
 
+
+
 const ProDetailsMens = () => {
-    
+    const navigate = useNavigate()
     const {id} = useParams()
     
     const { loading, error, data } = useFetch(import.meta.env.VITE_API_URL + `/api/mens-products/${id}?populate=*`)
