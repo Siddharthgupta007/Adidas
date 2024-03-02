@@ -37,7 +37,7 @@ function cart() {
 	
 	  const handleDec = (id) => {
 		const updatedCart = cart.map(item => {
-		  if(item.id === id && item.quantity >= 2) {
+		   if(item.id === id && item.quantity >=2) {
 			return {
 			  ...item,
 			  quantity: item.quantity - 1
@@ -81,8 +81,9 @@ function cart() {
 								<div className="mt-4 flex items-center flex-col">
 									<span className="mr-2 text-gray-600">Quantity:{item.quantity}</span>
 									<div className="flex items-center">
+									
 										<button className="bg-gray-200 rounded-l-lg px-2 py-1" onClick={()=> handleDec(item.id)}>-</button>
-										<span className="mx-2 text-gray-600">1</span>
+										<span className="mx-2 text-gray-600">{item.quantity}</span>
 										<button className="bg-gray-200 rounded-r-lg px-2 py-1" onClick={() => handleInc(item.id)}>+</button>
 									</div>
 	                              
