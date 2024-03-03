@@ -39,7 +39,7 @@ const Hero = () => {
     <div className="hero">
       <div className="homeimage">
         <div className="videoDiv">
-          <motion.img animate={{ x: [50, 100, 100] }} className="adidassvg flex items-center justify-center w-100" src={bigadidas} alt="" />
+          <motion.img animate={{ x: [0, 100,0] }} className="adidassvg flex items-center justify-center w-100" src={bigadidas} alt="" />
           {/* add "autplay in the video propertise to play video in loop " */}
           <video src={video} autoPlay muted loop className='video'></video>
         </div>
