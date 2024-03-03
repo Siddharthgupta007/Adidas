@@ -9,7 +9,7 @@
 This project is a Ecommerce clone of the Adidas website, developed using ReactJS for the front-end, Tailwind CSS, Mumbai UI, Daisy UI, and Flow Bite for styling. The back-end is powered by Node.js using Strapi CMS , and the database is PostgreSQL 12. Version control is managed with Git and hosted on GitHub. The deployment is handled through Render.
 
 
- **Live**:https://65cf698410442f042b59540f--deft-malabi-6de791.netlify.app/
+ **Live**:https://adifrontv4.netlify.app/
 
 
 ## Features
