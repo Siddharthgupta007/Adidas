@@ -14,8 +14,8 @@ function gazzeticard(shoe, title) {
             <div className="flex flex-col gap-7 items-center justify-center">
               <h1>{title}</h1>
 
-              <a href="#" target="_blank"
-                className="secon-btn transit">Add to Cart</a>
+              {/* <a href="#" target="_blank"
+                className="secon-btn transit">Add to Cart</a> */}
             </div>
           </div>
         </div>

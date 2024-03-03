@@ -45,22 +45,24 @@ const Navbar = () => {
           <li className="">
             <NavLink to="/cart">
               <div className="flex justify-center">
-                <img className='search' src={bag} alt="" />
-                <p>({cart.length})</p>
+                <img className='search' style={{width:"25px"}}  src={bag} alt="" />
+                <p style={{fontSize:"15px"}}>({cart.length})</p>
               </div>
             </NavLink>
 
           </li>
 
           <li>
-            <header className="flex justify-center items-center align-middle px-6 pt-4 ">
-              <SignedOut>
-                <SignInButton />
+            
+            <header className="flex justify-center items-center align-middle px-4 pt-4">
+              <SignedOut> 
+              <SignInButton/> 
               </SignedOut>
               <SignedIn>
                 <UserButton />
               </SignedIn>
             </header>
+           
           </li>
         </ul>
 
