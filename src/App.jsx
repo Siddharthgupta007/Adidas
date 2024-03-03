@@ -18,32 +18,39 @@ import ProDetailsKids from './components/Cards/proddetails/ProdetailsKids.jsx'
 
 
 
+
 function App() {
 
 
   return (
     <>
-     
+
+    
+        
+      
+
       <BrowserRouter >
-     
-      <Navbar/>
+
+        <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/mens" element={<Mens />} />
+          <Route path="/women" element={<Women />} />
+          <Route path="/kids" element={<Kids />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/productdetails/:id" element={<ProDetails />} />
+          <Route path="/singleproduct/:id" element={<Singleprod />} />
+          <Route path="/ProDetailsMens/:id" element={<ProDetailsMens />} />
+          <Route path="/ProDetailsWomen/:id" element={<ProDetailsWomen />} />
+          <Route path="/ProDetailsKids/:id" element={<ProDetailsKids />} />
+        </Routes>
+
+        <Footer />
+
+      </BrowserRouter>
+
       
-      <Routes>
-        <Route path="/" element={<Hero/>} />
-        <Route path="/mens" element={<Mens/>} />
-        <Route path="/women" element={<Women/>} />
-        <Route path="/kids" element={<Kids/>} />
-        <Route path="/cart" element={<Cart/>} />
-        <Route path="/productdetails/:id" element={<ProDetails/>} />
-        <Route path="/singleproduct/:id" element={<Singleprod/>} />
-        <Route path="/ProDetailsMens/:id" element={<ProDetailsMens/>} />
-        <Route path="/ProDetailsWomen/:id" element={<ProDetailsWomen/>} />
-        <Route path="/ProDetailsKids/:id" element={<ProDetailsKids/>} />
-      </Routes>
-      
-      <Footer/>
-      
-    </BrowserRouter>
 
     </>
   )

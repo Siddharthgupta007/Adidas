@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { Link, NavLink } from "react-router-dom";
 import adid from '../../images/adidasSVG01.svg'
 import bag from '../../images/bag.svg'
-
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,19 +37,30 @@ const Navbar = () => {
           <li className="px-6">
             <NavLink to="/kids">Kids</NavLink>
           </li>
-          
+
         </ul>
 
 
         <ul className={menuOpen ? "open" : ""}>
           <li className="">
-          <NavLink to="/cart">
-            <div className="flex justify-center">
-            <img className='search' src={bag} alt="" />
-            <p>({cart.length})</p>
-            </div>
-          </NavLink>
-          
+            <NavLink to="/cart">
+              <div className="flex justify-center">
+                <img className='search' src={bag} alt="" />
+                <p>({cart.length})</p>
+              </div>
+            </NavLink>
+
+          </li>
+
+          <li>
+            <header className="flex justify-center items-center align-middle px-6 pt-4 ">
+              <SignedOut>
+                <SignInButton />
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+            </header>
           </li>
         </ul>
 
